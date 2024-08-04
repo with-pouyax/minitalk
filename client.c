@@ -21,7 +21,7 @@ int	main(int argc, char **argv)
 		ft_printf("Usage: %s <server_pid> <message>\n", argv[0]);
 		return (EXIT_FAILURE);
 	}
-	server_pid = (pid_t)atoi(argv[1]);
+	server_pid = (pid_t)atoi(argv[1]); //**fix it
 	if (server_pid <= 0)
 	{
 		ft_printf ("Invalid server PID\n");
