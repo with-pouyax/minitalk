@@ -33,7 +33,6 @@ The Minitalk project demonstrates the use of UNIX signals for inter-process comm
 - Implemented thorough error handling to prevent the program from quitting unexpectedly due to segmentation faults, memory leaks, or other errors.
 - Ensures all allocated memory is properly freed.
 
-
 ## Implementation Details
 
 ### Server
@@ -54,3 +53,51 @@ The Minitalk project demonstrates the use of UNIX signals for inter-process comm
 1. Clone the repository:
    ```sh
    git clone git@github.com:with-pouyax/minitalk.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd minitalk
+   ```
+3. Build the project using the provided Makefile:
+   ```sh
+   make
+   ```
+
+### Running the Server
+1. Start the server:
+   ```sh
+   ./server
+   ```
+2. The server will print its PID, which will be used by the client for communication.
+
+### Running the Client
+1. Start the client with the server PID and the message to send:
+   ```sh
+   ./client <server_pid> "<message>"
+   ```
+
+## Examples
+
+### Start the Server
+```sh
+./server
+```
+Output:
+```
+Server PID: 12345
+```
+
+### Send a Message from the Client
+```sh
+./client 12345 "Hello, World!"
+```
+Server Output:
+```
+Hello, World!
+```
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+Special thanks to the 42 School for providing the framework and inspiration for this project.
