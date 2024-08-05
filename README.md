@@ -53,4 +53,4 @@ The Minitalk project demonstrates the use of UNIX signals for inter-process comm
 ### Building
 1. Clone the repository:
    ```sh
-   git clone <repository_url>
+   git clone git@github.com:with-pouyax/minitalk.git
