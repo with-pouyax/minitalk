@@ -6,7 +6,7 @@
 /*   By: pghajard <pghajard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 13:18:43 by pghajard          #+#    #+#             */
-/*   Updated: 2024/07/31 17:02:50 by pghajard         ###   ########.fr       */
+/*   Updated: 2024/08/05 16:45:50 by pghajard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,20 +54,24 @@ void	setup_signal_handlers(void)
 	}
 }
 
-int	main(void)
+void	signal_handler(int sig)
 {
 	struct s_server_data	*server_data;
 
+	(void)sig;
+	server_data = get_server_data();
+	free(server_data->message);
+	free(server_data);
+	exit(0);
+}
+
+int	main(void)
+{
+	signal(SIGINT, signal_handler);
 	init_server_data();
 	setup_signal_handlers();
 	printf("Server PID: %d\n", getpid());
 	while (1)
 		pause();
-	server_data = get_server_data();
-	if (server_data)
-	{
-		free(server_data->message);
-		free(server_data);
-	}
 	return (0);
 }

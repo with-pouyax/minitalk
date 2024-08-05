@@ -6,7 +6,7 @@
 /*   By: pghajard <pghajard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 12:55:03 by pghajard          #+#    #+#             */
-/*   Updated: 2024/08/01 10:04:39 by pghajard         ###   ########.fr       */
+/*   Updated: 2024/08/05 16:48:51 by pghajard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	send_bit(pid_t server_pid, unsigned char c, int bit_index)
 		exit(EXIT_FAILURE);
 	}
 	while (!get_ack_received())
-		usleep(SLEEP_DURATION);
+		pause();
 	set_ack_received(0);
 }
 

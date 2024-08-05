@@ -6,7 +6,7 @@
 /*   By: pghajard <pghajard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 13:13:53 by pghajard          #+#    #+#             */
-/*   Updated: 2024/07/31 17:06:49 by pghajard         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:46:13 by pghajard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ void					handle_signal(int sig, \
 siginfo_t *siginfo, void *context);
 void					init_server_data(void);
 void					setup_signal_handlers(void);
+void					*ft_memcpy(void *dest, const void *src, size_t n);
 
-#endif // SERVER_H
+#endif

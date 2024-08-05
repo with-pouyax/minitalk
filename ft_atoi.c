@@ -1,33 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pghajard <pghajard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/31 12:40:30 by pghajard          #+#    #+#             */
-/*   Updated: 2024/08/05 15:38:17 by pghajard         ###   ########.fr       */
+/*   Created: 2024/04/08 18:02:11 by pghajard          #+#    #+#             */
+/*   Updated: 2024/08/05 15:43:28 by pghajard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "client.h"
+#include "server.h"
 
-int	main(int argc, char **argv)
+int	ft_atoi(const char *nptr)
 {
-	pid_t	server_pid;
+	int	i;
+	int	sign;
+	int	r;
 
-	if (argc != 3)
+	i = 0;
+	sign = 1;
+	r = 0;
+	while ((nptr[i] > 8 && nptr[i] < 14) || (nptr[i] == ' '))
+		i++;
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		ft_printf("Usage: %s <server_pid> <message>\n", argv[0]);
-		return (EXIT_FAILURE);
+		if (nptr[i] == '-')
+			sign *= -1;
+		i++;
 	}
-	server_pid = (pid_t)ft_atoi(argv[1]);
-	if (server_pid <= 0)
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		ft_printf ("Invalid server PID\n");
-		return (EXIT_FAILURE);
+		r = (r * 10) + (nptr[i] - '0');
+		i++;
 	}
-	setup_signal_handlers();
-	send_message(server_pid, argv[2]);
-	return (EXIT_SUCCESS);
+	return (r * sign);
 }

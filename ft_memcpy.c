@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   client.c                                           :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pghajard <pghajard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/31 12:40:30 by pghajard          #+#    #+#             */
-/*   Updated: 2024/08/05 15:38:17 by pghajard         ###   ########.fr       */
+/*   Created: 2024/04/03 13:01:29 by pghajard          #+#    #+#             */
+/*   Updated: 2024/08/05 15:41:59 by pghajard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "client.h"
 
-int	main(int argc, char **argv)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	pid_t	server_pid;
+	size_t				i;
+	unsigned char		*destination;
+	const unsigned char	*source;
 
-	if (argc != 3)
+	destination = (unsigned char *)dest;
+	source = (unsigned char *)src;
+	i = 0;
+	if (!dest && !src)
+		return (dest);
+	while (i < n)
 	{
-		ft_printf("Usage: %s <server_pid> <message>\n", argv[0]);
-		return (EXIT_FAILURE);
+		destination[i] = source[i];
+		i++;
 	}
-	server_pid = (pid_t)ft_atoi(argv[1]);
-	if (server_pid <= 0)
-	{
-		ft_printf ("Invalid server PID\n");
-		return (EXIT_FAILURE);
-	}
-	setup_signal_handlers();
-	send_message(server_pid, argv[2]);
-	return (EXIT_SUCCESS);
+	return (dest);
 }

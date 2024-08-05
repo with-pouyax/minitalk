@@ -6,7 +6,7 @@
 /*   By: pghajard <pghajard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 13:19:26 by pghajard          #+#    #+#             */
-/*   Updated: 2024/07/31 16:51:47 by pghajard         ###   ########.fr       */
+/*   Updated: 2024/08/05 15:52:03 by pghajard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	resize_buffer(int *char_index, int *buffer_size)
 		write(STDERR_FILENO, "Memory allocation error\n", 24);
 		exit(EXIT_FAILURE);
 	}
-	memcpy(new_message, server_data->message, *char_index); //fix this **
+	ft_memcpy(new_message, server_data->message, *char_index);
 	free(server_data->message);
 	server_data->message = new_message;
 }
@@ -51,7 +51,7 @@ void	process_complete_char(int *char_index, unsigned char *current_char, \
 		resize_buffer(char_index, buffer_size);
 	if (*current_char == '\0')
 	{
-		ft_printf("Received complete message: %s\n", server_data->message);
+		ft_printf("%s\n", server_data->message);
 		*char_index = 0;
 	}
 	*current_char = 0;
