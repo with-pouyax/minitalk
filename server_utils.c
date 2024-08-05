@@ -35,7 +35,7 @@ void	resize_buffer(int *char_index, int *buffer_size)
 		write(STDERR_FILENO, "Memory allocation error\n", 24);
 		exit(EXIT_FAILURE);
 	}
-	memcpy(new_message, server_data->message, *char_index);
+	memcpy(new_message, server_data->message, *char_index); //fix this **
 	free(server_data->message);
 	server_data->message = new_message;
 }
