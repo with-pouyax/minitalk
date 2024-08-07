@@ -70,7 +70,7 @@ int	main(void)
 	signal(SIGINT, signal_handler);
 	init_server_data();
 	setup_signal_handlers();
-	printf("Server PID: %d\n", getpid());
+	ft_printf("Server PID: %d\n", getpid());
 	while (1)
 		pause();
 	return (0);
