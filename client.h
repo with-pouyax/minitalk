@@ -6,19 +6,15 @@
 /*   By: pghajard <pghajard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 12:53:47 by pghajard          #+#    #+#             */
-/*   Updated: 2024/08/12 09:49:07 by pghajard         ###   ########.fr       */
+/*   Updated: 2024/08/12 10:02:27 by pghajard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLIENT_H
 # define CLIENT_H
 
-# include <stdio.h>
 # include <stdlib.h>
-# include <unistd.h>
 # include <signal.h>
-# include <string.h>
-# include <errno.h>
 # include "ft_printf/ft_printf.h"
 
 # define SLEEP_DURATION 100

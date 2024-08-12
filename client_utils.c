@@ -6,7 +6,7 @@
 /*   By: pghajard <pghajard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 12:55:03 by pghajard          #+#    #+#             */
-/*   Updated: 2024/08/05 16:48:51 by pghajard         ###   ########.fr       */
+/*   Updated: 2024/08/12 09:59:48 by pghajard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	setup_signal_handlers(void)
 	sigemptyset(&sa.sa_mask);
 	if (sigaction(SIGUSR1, &sa, NULL) == -1)
 	{
-		ft_printf("Error setting up signal handler: %s\n", strerror(errno));
+		ft_printf("Error setting up signal handler\n");
 		exit(EXIT_FAILURE);
 	}
 }

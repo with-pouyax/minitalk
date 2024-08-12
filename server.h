@@ -6,18 +6,16 @@
 /*   By: pghajard <pghajard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 13:13:53 by pghajard          #+#    #+#             */
-/*   Updated: 2024/08/12 09:44:52 by pghajard         ###   ########.fr       */
+/*   Updated: 2024/08/12 10:04:10 by pghajard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SERVER_H
 # define SERVER_H
 
-# include <stdio.h>
 # include <stdlib.h>
 # include <signal.h>
 # include <unistd.h>
-# include <string.h>
 # include "ft_printf/ft_printf.h"
 
 # define INITIAL_BUFFER_SIZE 1024
