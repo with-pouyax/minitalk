@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atopid_t.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pghajard <pghajard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 18:02:11 by pghajard          #+#    #+#             */
-/*   Updated: 2024/08/05 15:43:28 by pghajard         ###   ########.fr       */
+/*   Updated: 2024/08/12 09:50:06 by pghajard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "server.h"
 
-int	ft_atoi(const char *nptr)
+pid_t	ft_atopid_t(const char *nptr)
 {
-	int	i;
-	int	sign;
-	int	r;
+	int		i;
+	int		sign;
+	pid_t	r;
 
 	i = 0;
 	sign = 1;
@@ -36,5 +36,5 @@ int	ft_atoi(const char *nptr)
 	}
 	if (nptr[i] != '\0')
 		return (-1);
-	return (r * sign);
+	return (r * (pid_t)sign);
 }

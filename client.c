@@ -6,7 +6,7 @@
 /*   By: pghajard <pghajard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 12:40:30 by pghajard          #+#    #+#             */
-/*   Updated: 2024/08/05 15:38:17 by pghajard         ###   ########.fr       */
+/*   Updated: 2024/08/12 09:35:06 by pghajard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(int argc, char **argv)
 		ft_printf("Usage: %s <server_pid> <message>\n", argv[0]);
 		return (EXIT_FAILURE);
 	}
-	server_pid = (pid_t)ft_atoi(argv[1]);
+	server_pid = ft_atopid_t(argv[1]);
 	if (server_pid <= 0)
 	{
 		ft_printf ("Invalid server PID\n");

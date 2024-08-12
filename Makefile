@@ -2,7 +2,7 @@
 NAME_SERVER = server
 NAME_CLIENT = client
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror
 
 # Directories
 FT_PRINTF_DIR = ft_printf
@@ -14,7 +14,7 @@ OBJS_SERVER = $(SRCS_SERVER:.c=.o)
 HEADER_SERVER = server.h
 
 # Source and object files for client
-SRCS_CLIENT = client.c client_utils.c client_global.c ft_atoi.c
+SRCS_CLIENT = client.c client_utils.c client_global.c ft_atopid_t.c
 OBJS_CLIENT = $(SRCS_CLIENT:.c=.o)
 HEADER_CLIENT = client.h
 

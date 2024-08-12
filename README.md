@@ -44,8 +44,8 @@ The Minitalk project demonstrates the use of UNIX signals for inter-process comm
 - **Functionality:** Parses command-line arguments, sets up signal handlers, sends messages to the server character by character, and handles acknowledgment signals.
 
 ### Utility Functions
-- **Files:** `ft_atoi.c`, `ft_memcpy.c`
-- **Functionality:** Implements auxiliary functions for converting strings to integers and copying memory.
+- **Files:** `ft_atopid_t.c`, `ft_memcpy.c`
+- **Functionality:** Implements auxiliary functions for converting strings to pid_t and copying memory.
 
 ## How to Build and Run
 

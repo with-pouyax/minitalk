@@ -6,7 +6,7 @@
 /*   By: pghajard <pghajard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 12:53:47 by pghajard          #+#    #+#             */
-/*   Updated: 2024/08/05 15:46:26 by pghajard         ###   ########.fr       */
+/*   Updated: 2024/08/12 09:49:07 by pghajard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ void			send_message(pid_t server_pid, const char *message);
 
 sig_atomic_t	get_ack_received(void);
 void			set_ack_received(sig_atomic_t ack);
-int				ft_atoi(const char *nptr);
+pid_t			ft_atopid_t(const char *nptr);
 
 #endif
