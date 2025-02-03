@@ -1,5 +1,7 @@
 # Minitalk
 
+![Minitalk](https://i.pinimg.com/736x/4e/53/0a/4e530a4fb2a99f45161d9e194058bc15.jpg)
+
 ## Summary
 Minitalk is a small data exchange program developed using UNIX signals. It consists of a client and a server that communicate by sending and receiving messages using SIGUSR1 and SIGUSR2 signals.
 
