@@ -12,7 +12,7 @@ Minitalk is a small data exchange program developed using UNIX signals. It consi
 4. [How to Build and Run](#how-to-build-and-run)
 5. [Examples](#examples)
 6. [License](#license)
-7. [Acknowledgments](#acknowledgments)
+7. [Acknowledgments](#acknowledgments) 
 
 ## Project Overview
 The Minitalk project demonstrates the use of UNIX signals for inter-process communication (IPC). The task involved creating two programs: a server and a client. The server waits for incoming messages from clients, while the client sends messages to the server. Communication is handled using SIGUSR1 and SIGUSR2 signals.
